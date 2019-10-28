@@ -2,6 +2,7 @@
 
 
 ## Questions/Answers
+
 1. What is the purpose of the doctype command?
     - It is not required.
     - To link to outside files.
@@ -19,26 +20,202 @@
     - On the DOCTYPE.
     - On the body tag.
 1. Explain the `static` CSS property.
-    - 
-    - 
-    - 
+    - Default; follows normal page flow.
+    - Removed from normal document flow and ignored by other elements.
+    - Normal flow; enables use of left/right/top/bottom/z-index.
 1. Explain the `absolute` CSS property.
-    - 
-    - 
-    - 
+    - Normal flow; enables use of left/right/top/bottom/z-index.
+    - Removed from flow, unaffected by scrolling and relative to the document.
+    - Removed from normal document flow and ignored by other elements.
 1. Explain the `relative` CSS property.
-    - 
-    - 
-    - 
+    - Normal flow; enables use of left/right/top/bottom/z-index.
+    - Default; follows normal page flow.
+    - Removed from flow, unaffected by scrolling and relative to the document.
 1. Explain the `fixed` CSS property.
-    - 
-    - 
-    - 
-1. 
-    - 
-    - 
-    - 
-1. 
-    - 
-    - 
-    - 
+    - Removed from flow, unaffected by scrolling and relative to the document.
+    - Default; follows normal page flow.
+    - Removed from normal document flow and ignored by other elements.
+1. What does 'pass by reference' mean?
+    - Javascript assigns primitive types as references to their place in memory.
+    - JavaScript assigns variables a reference to objects by default, rather than creating a new object.
+    - Functions are unable to mutate any variable that is passed to them as an argument.
+1. What syntax is used to iterate through each property in an object?
+    - for (let i = 1; i < myObj.length; i++) {myObj[i]}
+    - myObj.forEach()
+    - for (each in myObj) {}
+
+```js
+const questions = [
+    {
+        question: '',
+        answers: [
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+        ]
+    },
+    {
+        question: '',
+        answers: [
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+        ]
+    },
+    {
+        question: '',
+        answers: [
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+        ]
+    },
+    {
+        question: '',
+        answers: [
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+        ]
+    },
+    {
+        question: '',
+        answers: [
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+        ]
+    },
+    {
+        question: '',
+        answers: [
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+        ]
+    },
+    {
+        question: '',
+        answers: [
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+        ]
+    },
+    {
+        question: '',
+        answers: [
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+        ]
+    },
+    {
+        question: '',
+        answers: [
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+        ]
+    },
+    {
+        question: '',
+        answers: [
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+            {
+                text: '',
+                correct: false;
+            }
+        ]
+    },
+]
+
+```
