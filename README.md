@@ -42,3 +42,4 @@
     - for (let i = 1; i < myObj.length; i++) {myObj[i]}
     - myObj.forEach()
     - for (each in myObj) {} **Correct**
+
