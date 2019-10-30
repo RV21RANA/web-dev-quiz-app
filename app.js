@@ -20,29 +20,50 @@ function renderQuestions () {
     $('main').html('');
     // If currentQuestion is larger than questions.length, render final screen
     if (STORE.currentQuestion >= questions.length) {
-        $('main').html('')
+        $('main').html(`
+            <p>Your final score is...</p>
+            <h3>${STORE.score}/${questions.length}</h3>
+            <button class="start">Play Again?</button>`)
     } else {
         // Else, assign questions[currentIndex] to a variable
         let currentQuestion = questions[STORE.currentQuestion];
-        let questionCounter = `<span>${STORE.currentQuestion + 1}/${questions.length}</span>`
+        let scoreCounter = `<div class="counter">Score: ${STORE.score}/${questions.length}</div>`;
+        let questionCounter = `<div class="counter">Question: ${STORE.currentQuestion + 1}/${questions.length}</div>`;
         // Use question object to set question text 
-        $('main').append(`${questionCounter}<p class="question">${currentQuestion.question}</p><ol></ol>`)
+        $('main').append(`${scoreCounter}${questionCounter}<p class="question">${currentQuestion.question}</p><ol></ol>`)
         // Using a loop, append answers to <ol>, assigning variables in an HTML string
         $('ol').append(`
-            <li class="check">${currentQuestion.answers[0].text}</li>
-            <li class="check">${currentQuestion.answers[1].text}</li>
-            <li class="check">${currentQuestion.answers[2].text}</li>`)
+            <li class="check ${currentQuestion.answers[0].correct}">${currentQuestion.answers[0].text}</li>
+            <li class="check ${currentQuestion.answers[1].correct}">${currentQuestion.answers[1].text}</li>
+            <li class="check ${currentQuestion.answers[2].correct}">${currentQuestion.answers[2].text}</li>`)
     }
+}
+
+function renderFeedback (feedback, answer) {
+    let currentQuestion = questions[STORE.currentQuestion];
+    let scoreCounter = `<div class="counter">Score: ${STORE.score}/${questions.length}</div>`;
+    let questionCounter = `<div class="counter">Question: ${STORE.currentQuestion + 1}/${questions.length}</div>`;
+    $('main').html(`${scoreCounter}${questionCounter}<p class="question">${currentQuestion.question}</p>
+                    ${feedback}${answer || ''}<button class="next">Next Question</button>`)
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                 CONTROLLER                                 */
 /* -------------------------------------------------------------------------- */
 
-function checkAnswer () {
-    // If correct, add 1 to score
-    // Append span with feedback and 'next' button
-    getNextQuestion();
+function checkAnswer (event) {
+    // If correct, add 1 to score and render positive feedback
+    if ($(event.target).hasClass('true')) {
+        STORE.score++;
+        let feedback = `<p>Correct!</p>`;
+        renderFeedback(feedback);
+    } else {
+        let feedback = `<p>That's not right...</p>`;
+        let answer = `<p>The answer was:
+                        <span class="green-text">${$('.true').text()}</span></p>`;
+        renderFeedback(feedback, answer)
+    }
+    
 }
 
 function getNextQuestion () {

@@ -18,7 +18,7 @@ const questions = [
         ]
     },
     {
-        question: 'What is a <head> element?',
+        question: 'What is the < head > element?',
         answers: [
             {
                 text: 'Where you should place your `h1` element.',
@@ -93,11 +93,11 @@ const questions = [
                 correct: false
             },
             {
-                text: 'Removed from flow, unaffected by scrolling and relative to the document.',
+                text: 'Removed from flow; unaffected by scrolling.',
                 correct: false
             },
             {
-                text: 'Removed from normal document flow and ignored by other elements.',
+                text: 'Removed from flow; affected by scrolling.',
                 correct: true
             }
         ]

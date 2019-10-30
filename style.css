@@ -47,8 +47,10 @@ main {
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 4rem;
-    
+    margin-bottom: 8rem;
+    padding: 1rem;
+    box-sizing: border-box;
+
     font-size: 1.2rem;
 }
 
@@ -61,19 +63,28 @@ button {
     height: 4rem;
     font-family: 'Inconsolata', monospace;
     font-size: 1.2rem;
+} button:hover {
+    cursor: pointer;
+    color: #1A1A1B;
+    background-color: white;
 }
 
+.question {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    font-size: 1.4rem;
+}
 
 ol {
     list-style-type: lower-alpha;
 }
+
 li {
     padding-top: 1rem;
     padding-bottom: 1rem;
 
     border-bottom: solid 2px white;
-}
-li:hover {
+} li:hover {
     cursor: pointer;
     color: #1A1A1B;
     background-color: white;
@@ -82,23 +93,7 @@ li:hover {
 label {
     display: none;
 }
-.correct {
-    background-color: green;
-    color: white;
-}
-.incorrect {
-    background-color: red;
-    color: white;
-}
-.green-border {
-    border: 2px solid green;
-}
-form {
-    margin-bottom: 100px;
-}
-.separator {
-    height: 20px;
-    background-color: black;
-    margin-left: -10px;
-    margin-right: -10px;
+
+.green-text {
+    color: greenyellow;
 }
