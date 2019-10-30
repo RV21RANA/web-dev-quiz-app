@@ -1,7 +1,7 @@
 
 const questions = [
     {
-        question: 'What is the purpose of the doctype command?',
+        question: 'What is the purpose of the DOCTYPE command?',
         answers: [
             {
                 text: 'It is not required.',
