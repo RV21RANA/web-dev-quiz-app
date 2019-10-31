@@ -1,5 +1,8 @@
 
 
+i {
+    color: white;
+}
 
 body {
     color: white;
@@ -9,13 +12,12 @@ body {
 }
 
 #root {
-    width: 480px;
-    height: 960px;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 header {
@@ -87,6 +89,15 @@ li {
     cursor: pointer;
     color: #1A1A1B;
     background-color: white;
+} 
+li:nth-of-type(1) {
+    color: rgb(86,156,214);
+}
+li:nth-of-type(2) {
+    color: rgb(206,145,120);
+}
+li:nth-of-type(3) {
+    color: rgb(156,220,254);
 }
 
 label {
@@ -101,5 +112,7 @@ label {
     #root {
         border: solid 2px white;
         border-radius: 2%;
+        width: 480px;
+        height: 960px;
     }
 }
