@@ -9,6 +9,7 @@ body {
     background-color: #1A1A1B;
     font-family: 'Inconsolata', monospace;
     margin: 0 auto;
+    /* height: 90vh; */
 }
 
 #root {
@@ -48,7 +49,6 @@ main {
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 8rem;
     padding: 1rem;
     box-sizing: border-box;
 
@@ -70,10 +70,23 @@ button {
     background-color: white;
 }
 
+.counters {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} .counters span {
+    font-size: 0.9rem;
+}
+
 .question {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    height: 30%;
     font-size: 1.4rem;
+}
+
+.answers {
+    height: 50%;
 }
 
 ol {
@@ -104,6 +117,19 @@ label {
     display: none;
 }
 
+footer {
+    width: 60%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} footer i {
+    color: #3A3A3B;
+} footer i:hover {
+    color: white;
+    cursor: pointer;
+}
+
 .green-text {
     color: greenyellow;
 }
@@ -113,6 +139,6 @@ label {
         border: solid 2px white;
         border-radius: 2%;
         width: 480px;
-        height: 960px;
+        height: 800px;
     }
 }
