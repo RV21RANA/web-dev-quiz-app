@@ -20,27 +20,34 @@ const STORE = {
 function renderQuestions () {
     // Clear the main element
     $('main').html('');
+
+    // Generate our content sections in the main element
+    $('main').append(`<section class="counters"></section>
+                        <section class="question"></section>
+                        <section class="answers"></section>`);
     
-    // Else, assign questions[currentIndex] to a variable
+    let counters = `<span>Question: ${STORE.currentQuestion + 1}/${questions.length}</span>
+                    <span>Score: ${STORE.score}/${questions.length}</span>`
+    $('.counters').append(`${counters}`)
+
+    // Use question object to set question text
+    // Assign questions[currentIndex] to a variable to access our current question data
     let currentQuestion = questions[STORE.currentQuestion];
-    let scoreCounter = `<div class="counter">< Score: ${STORE.score}/${questions.length} ></div>`;
-    let questionCounter = `<div class="counter">< Question: ${STORE.currentQuestion + 1}/${questions.length} ></div>`;
-    // Use question object to set question text 
-    $('main').append(`${scoreCounter}${questionCounter}<p class="question">${currentQuestion.question}</p><ol></ol>`)
+    $('.question').append(`<p>${currentQuestion.question}</p>`);
     // Using question object, append answers to <ol>, assigning variables in an HTML string
-    $('ol').append(`
+    $('.answers').append(`<ol>
         <li class="check ${currentQuestion.answers[0].correct}">${currentQuestion.answers[0].text}</li>
         <li class="check ${currentQuestion.answers[1].correct}">${currentQuestion.answers[1].text}</li>
-        <li class="check ${currentQuestion.answers[2].correct}">${currentQuestion.answers[2].text}</li>`)
-    
+        <li class="check ${currentQuestion.answers[2].correct}">${currentQuestion.answers[2].text}</li></ol>`);
 }
 
 function renderFeedback (feedback, answer) {
-    let currentQuestion = questions[STORE.currentQuestion];
-    let scoreCounter = `<div class="counter">< Score: ${STORE.score}/${questions.length} ></div>`;
-    let questionCounter = `<div class="counter">< Question: ${STORE.currentQuestion + 1}/${questions.length} ></div>`;
-    $('main').html(`${scoreCounter}${questionCounter}<p class="question">${currentQuestion.question}</p>
-                    ${feedback}${answer || ''}<button class="next">Next Question</button>`)
+
+    let counters = `<span>Question: ${STORE.currentQuestion + 1}/${questions.length}</span>
+    <span>Score: ${STORE.score}/${questions.length}</span>`
+    $('.counters').html(`${counters}`)
+
+    $('.answers').html(`${feedback}${answer || ''}<button class="next">Next Question</button>`)
 }
 
 function renderFinal () {
