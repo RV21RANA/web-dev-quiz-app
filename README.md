@@ -42,3 +42,6 @@ Before you dive into the app, you'll need to:
 
 ### My approach
 
+### Future Features
+- Randomized question order
+- 'Learn more' link provided on wrong answers

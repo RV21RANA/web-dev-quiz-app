@@ -68,9 +68,8 @@ function checkAnswer (event) {
         let feedback = `<p>Correct!</p>`;
         renderFeedback(feedback);
     } else {
-        let feedback = `<p>That's not right...</p>`;
-        let answer = `<p>The answer was:
-                        <span class="green-text">${$('.true').text()}</span></p>`;
+        let feedback = `<p>Nope! The answer was:</p>`;
+        let answer = `<p><span class="green-text">${$('.true').text()}</span></p>`;
         renderFeedback(feedback, answer)
     }
 }
