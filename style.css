@@ -93,23 +93,29 @@ ol {
     list-style-type: lower-alpha;
 }
 
-li {
+li input{
     padding-top: 1rem;
     padding-bottom: 1rem;
-
+    width: 100%;
+    text-align: left;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.2rem;
+    border: none;
     border-bottom: solid 2px white;
-} li:hover {
+    background-color: #1A1A1B;
+} 
+li input:hover {
     cursor: pointer;
     color: #1A1A1B;
     background-color: white;
 } 
-li:nth-of-type(1) {
+li input:nth-of-type(1) {
     color: rgb(86,156,214);
 }
-li:nth-of-type(2) {
+li input:nth-of-type(2) {
     color: rgb(206,145,120);
 }
-li:nth-of-type(3) {
+li input:nth-of-type(3) {
     color: rgb(156,220,254);
 }
 

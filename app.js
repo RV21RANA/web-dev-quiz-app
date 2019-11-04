@@ -35,10 +35,10 @@ function renderQuestions () {
     let currentQuestion = questions[STORE.currentQuestion];
     $('.question').append(`<p>${currentQuestion.question}</p>`);
     // Using question object, append answers to <ol>, assigning variables in an HTML string
-    $('.answers').append(`<ol>
-        <li class="check ${currentQuestion.answers[0].correct}">${currentQuestion.answers[0].text}</li>
+    $('.answers').append(`<form><ol>
+        <li class="check ${currentQuestion.answers[0].correct}"><input type="submit" value="${currentQuestion.answers[0].text}"></li>
         <li class="check ${currentQuestion.answers[1].correct}">${currentQuestion.answers[1].text}</li>
-        <li class="check ${currentQuestion.answers[2].correct}">${currentQuestion.answers[2].text}</li></ol>`);
+        <li class="check ${currentQuestion.answers[2].correct}">${currentQuestion.answers[2].text}</li></ol></form>`);
 }
 
 function renderFeedback (feedback, answer) {
@@ -62,6 +62,8 @@ function renderFinal () {
 /* -------------------------------------------------------------------------- */
 
 function checkAnswer (event) {
+    // Disable default submit behavior
+    event.preventDefault();
     // If correct, add 1 to score and render positive feedback
     if ($(event.target).hasClass('true')) {
         STORE.score++;
