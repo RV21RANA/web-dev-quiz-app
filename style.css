@@ -30,7 +30,6 @@ header {
     box-sizing: border-box;
 }
 h1 {
-    font-family: ;
     font-size: 2rem;
     margin-right: 30px;
     display: inline-block;
@@ -84,10 +83,13 @@ button {
 .question {
     height: 20%;
     font-size: 1.4rem;
+    display: flex;
+    align-items: center;
 }
 
 .answers {
     height: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,27 +98,38 @@ button {
     font-weight: bold;
 }
 
+form {
+    width: 100%;
+}
+
 ol {
     list-style-type: lower-alpha;
 }
 
-li {
+li button{
+    width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
-
+    text-align: left;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.25rem;
+    border: none;
     border-bottom: solid 2px white;
-} li:hover {
+    background-color: #1A1A1B;
+    border-radius: 0;
+} 
+li button:hover {
     cursor: pointer;
     color: #1A1A1B;
     background-color: white;
 } 
-li:nth-of-type(1) {
+li:nth-of-type(1) button {
     color: rgb(86,156,214);
 }
-li:nth-of-type(2) {
+li:nth-of-type(2) button {
     color: rgb(206,145,120);
 }
-li:nth-of-type(3) {
+li:nth-of-type(3) button {
     color: rgb(156,220,254);
 }
 
@@ -130,6 +143,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 20px;
 } footer i {
     color: #3A3A3B;
 } footer i:hover {
@@ -137,9 +151,15 @@ footer {
     cursor: pointer;
 }
 
-.green-text {
+.correct-answer {
     color: greenyellow;
-    width: 50%;
+    width: 80%;
+    text-align: center;
+}
+
+img.landing {
+    height: 200px;
+    padding-bottom: 20px;
 }
 
 @media screen and (min-width: 600px) {
@@ -148,6 +168,6 @@ footer {
         border-radius: 2%;
         width: 60%;
         height: 800px;
-        margin-top: 5%
+        margin-top: 20px;
     }
 }
