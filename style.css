@@ -157,7 +157,7 @@ footer {
     text-align: center;
 }
 
-main img {
+img.landing {
     height: 200px;
     padding-bottom: 20px;
 }
