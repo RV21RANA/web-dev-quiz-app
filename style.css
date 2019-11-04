@@ -9,7 +9,6 @@ body {
     background-color: #1A1A1B;
     font-family: 'Inconsolata', monospace;
     margin: 0 auto;
-    /* height: 90vh; */
 }
 
 #root {
@@ -31,6 +30,7 @@ header {
     box-sizing: border-box;
 }
 h1 {
+    font-family: ;
     font-size: 2rem;
     margin-right: 30px;
     display: inline-block;
@@ -72,6 +72,7 @@ button {
 
 .counters {
     width: 80%;
+    max-width: 720px;
     height: 20%;
     display: flex;
     justify-content: space-between;
@@ -81,12 +82,18 @@ button {
 }
 
 .question {
-    height: 30%;
+    height: 20%;
     font-size: 1.4rem;
 }
 
 .answers {
-    height: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} .answers p {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 ol {
@@ -138,13 +145,15 @@ footer {
 
 .green-text {
     color: greenyellow;
+    width: 50%;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
     #root {
         border: solid 2px white;
         border-radius: 2%;
-        width: 480px;
+        width: 60%;
         height: 800px;
+        margin-top: 5%
     }
 }
