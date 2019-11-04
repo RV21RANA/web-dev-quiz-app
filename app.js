@@ -26,27 +26,27 @@ function renderQuestions () {
                         <section class="question"></section>
                         <section class="answers"></section>`);
     
-    let counters = `<span>Question: ${STORE.currentQuestion + 1}/${questions.length}</span>
-                    <span>Score: ${STORE.score}/${questions.length}</span>`
-    $('.counters').append(`${counters}`)
+    renderCounters();
 
-    // Use question object to set question text
     // Assign questions[currentIndex] to a variable to access our current question data
     let currentQuestion = questions[STORE.currentQuestion];
+    // Use question object to set question text
     $('.question').append(`<p>${currentQuestion.question}</p>`);
-    // Using question object, append answers to <ol>, assigning variables in an HTML string
+    // Using the question object, insert answers data into a list
     $('.answers').html(`<form><ol>
         <li class="check"><button type="submit" class="${currentQuestion.answers[0].correct}">${currentQuestion.answers[0].text}</button></li>
         <li class="check"><button type="submit" class="${currentQuestion.answers[1].correct}">${currentQuestion.answers[1].text}</button></li>
         <li class="check"><button type="submit" class="${currentQuestion.answers[2].correct}">${currentQuestion.answers[2].text}</button></li></ol></form>`);
 }
 
-function renderFeedback (feedback, answer) {
-
+function renderCounters () {
     let counters = `<span>Question: ${STORE.currentQuestion + 1}/${questions.length}</span>
-    <span>Score: ${STORE.score}/${questions.length}</span>`
+                    <span>Score: ${STORE.score}/${questions.length}</span>`
     $('.counters').html(`${counters}`)
+}
 
+function renderFeedback (feedback, answer) {
+    renderCounters();
     $('.answers').html(`${feedback}${answer || ''}<button class="next">Next Question</button>`)
 }
 
@@ -71,7 +71,7 @@ function checkAnswer (event) {
         renderFeedback(feedback);
     } else {
         let feedback = `<p>Nope! The answer was:</p>`;
-        let answer = `<p><span class="green-text">${$('.true').text()}</span></p>`;
+        let answer = `<p class="correct-answer">${$('.true').text()}</p>`;
         renderFeedback(feedback, answer)
     }
 }

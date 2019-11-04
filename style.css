@@ -152,9 +152,10 @@ footer {
     cursor: pointer;
 }
 
-.green-text {
+.correct-answer {
     color: greenyellow;
-    width: 50%;
+    width: 80%;
+    text-align: center;
 }
 
 img.landing {

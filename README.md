@@ -1,6 +1,6 @@
 # Front-End Quiz App
 
-GitHub Pages: https://pmnord.github.io/quiz-app/
+GitHub Pages: https://pmnord.github.io/front-end-quiz-app/
 
 ## About this project
 
@@ -26,12 +26,12 @@ The following requirements cover what the app must do, from the user's perspecti
 #### Technical requirements
 Your quiz app must:
 
-- Render answer choices in a `<form>`.
-- Use semantic HTML, along with CSS and jQuery.
+- Render answer choices in a `<form>`. DONE
+- Use semantic HTML, along with CSS and jQuery. DONE
 - Follow a11y best practices.
     - Refer back to the checkpoints on accessibility and forms for help.
-- Use responsive design.
-- Be fully usable by keyboard (which will be easy enough if you start with a form).
+- Use responsive design. DONE
+- Be fully usable by keyboard (which will be easy enough if you start with a form). DONE
 
 #### Process requirements
 Before you dive into the app, you'll need to:
@@ -42,6 +42,14 @@ Before you dive into the app, you'll need to:
 
 ### My approach
 
+- Mobile first design
+    - Kept the layout simple for mobile usage
+    - Used media queries to resize the page for desktops
+- No page re-renders
+    - No lengthy page reload times
+    - I opted to keep as many elements on the page as static as possible to reduce visual confusion
+
 ### Future Features
 - Randomized question order
 - 'Learn more' link provided on wrong answers
+- Additional quiz libraries for study, with a way to switch between them in the interface
