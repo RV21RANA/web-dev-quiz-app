@@ -51,5 +51,6 @@ Before you dive into the app, you'll need to:
 
 ### Future Features
 - Randomized question order
+- Randomized answer order (so that you don't just remember the position of the answer)
 - 'Learn more' link provided on wrong answers
 - Additional quiz libraries for study, with a way to switch between them in the interface
