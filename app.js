@@ -23,8 +23,10 @@ function renderQuestions () {
 
     // Generate our content sections in the main element
     $('main').append(`<section class="counters"></section>
-                        <section class="question"></section>
-                        <section class="answers"></section>`);
+                        <form>
+                            <div class="question"></div>
+                            <fieldset class="answers"></fieldset>
+                        </form>`);
     
     let counters = `<span>Question: ${STORE.currentQuestion + 1}/${questions.length}</span>
                     <span>Score: ${STORE.score}/${questions.length}</span>`
@@ -44,10 +46,11 @@ function renderQuestions () {
 function renderFeedback (feedback, answer) {
 
     let counters = `<span>Question: ${STORE.currentQuestion + 1}/${questions.length}</span>
-    <span>Score: ${STORE.score}/${questions.length}</span>`
-    $('.counters').html(`${counters}`)
+    <span>Score: ${STORE.score}/${questions.length}</span>`;
+    $('.counters').html(`${counters}`);
 
-    $('.answers').html(`${feedback}${answer || ''}<button class="next">Next Question</button>`)
+    $('.answers').html(`${feedback}${answer || ''}`);
+    $('main').append(`<button class="next">Next Question</button>`);
 }
 
 function renderFinal () {

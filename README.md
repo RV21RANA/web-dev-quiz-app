@@ -42,6 +42,10 @@ Before you dive into the app, you'll need to:
 
 ### My approach
 
+**Features**
+- Mobile-first, minimalist design
+- Customizable questions.js makes the app modular
+
 ### Future Features
 - Randomized question order
 - 'Learn more' link provided on wrong answers
