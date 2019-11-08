@@ -82,7 +82,10 @@ button {
 .question {
     height: 20%;
     font-size: 1.4rem;
-    text-align: center
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 fieldset {
@@ -93,6 +96,7 @@ fieldset {
 .answers {
     height: 60%;
     width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,10 +114,14 @@ form {
 
 ol {
     list-style-type: lower-alpha;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 li button{
     width: 100%;
+    height: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
     text-align: left;
@@ -168,13 +176,14 @@ footer {
 
 .correct-answer {
     color: greenyellow;
-    width: 80%;
+    width: 100%;
     text-align: center;
 }
 
 img.landing {
     height: 200px;
     padding-bottom: 20px;
+    margin-top: 120px;
 }
 
 @media screen and (min-width: 600px) {
