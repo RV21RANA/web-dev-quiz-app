@@ -48,8 +48,9 @@ Before you dive into the app, you'll need to:
 - No page re-loads
 - Opted to keep as many elements on the page as static as possible to reduce visual confusion
 
-### Future Features
+### Future Features and Improvements
 - Randomized question order
 - Randomized answer order
 - 'Learn more' link provided on wrong answers
 - Additional quiz libraries for study, with a way to switch between them
+- Fix the question section so that it doesn't reposition when the feedback view is rendered

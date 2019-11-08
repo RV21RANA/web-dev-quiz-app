@@ -55,9 +55,12 @@ main {
 
 button {
     color: white;
-    background-color: #1A1A1B;
-    border: solid 2px white;
-    border-radius: 5%;
+    border: none;
+    border: solid 0.5px white;
+    background-color: #1F1F1F;
+    border-radius: 5px;
+    box-shadow: 1.5px 1.5px 1px white;
+
     width: 10rem;
     height: 4rem;
     font-family: 'Inconsolata', monospace;
@@ -119,6 +122,10 @@ ol {
     flex-direction: column;
 }
 
+li {
+    margin-bottom: 7px;
+}
+
 li button{
     width: 100%;
     height: 100%;
@@ -127,32 +134,27 @@ li button{
     text-align: left;
     font-family: 'Inconsolata', monospace;
     font-size: 1.25rem;
-    border: none;
-    border-bottom: solid 2px white;
-    background-color: #1A1A1B;
-    border-radius: 0;
 } 
 li button:hover {
     cursor: pointer;
-    color: #1A1A1B;
     background-color: #FFF;
 } 
-li:nth-of-type(1) {
-    color: #569CD6;
+li:nth-of-type(1), li:nth-of-type(1) button {
+    color: #7CB2DF;
 }
-li:nth-of-type(1):hover {
+li:nth-of-type(1) button:hover {
     color: #225C8C;
 }
-li:nth-of-type(2) {
-    color: #CE9178;
+li:nth-of-type(2), li:nth-of-type(2) button {
+    color: #D49D87;
 }
-li:nth-of-type(2):hover {
+li:nth-of-type(2) button:hover {
     color: #864832;
 }
-li:nth-of-type(3) {
+li:nth-of-type(3), li:nth-of-type(3) button {
     color: #9CDCFE;
 }
-li:nth-of-type(3):hover {
+li:nth-of-type(3) button:hover {
     color: #015D8E;
 }
 
@@ -175,7 +177,7 @@ footer {
 }
 
 .correct-answer {
-    color: greenyellow;
+    color: #56ff00;
     width: 100%;
     text-align: center;
 }

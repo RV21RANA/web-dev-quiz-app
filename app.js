@@ -70,7 +70,7 @@ function checkAnswer (event) {
     // If correct, add 1 to score and render positive feedback
     if ($(event.target).hasClass('true')) {
         STORE.score++;
-        let feedback = `<p>Correct!</p>`;
+        let feedback = `<p class="correct-answer">Correct!</p>`;
         renderFeedback(feedback);
     } else {
         let feedback = `<p>Nope! The answer was:</p>`;
