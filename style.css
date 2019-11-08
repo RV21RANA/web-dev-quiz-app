@@ -13,7 +13,7 @@ body {
 
 #root {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #FFF;
     width: 100%;
     height: 4rem;
     box-sizing: border-box;
@@ -43,14 +43,13 @@ h1 {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
     width: 100%;
     margin: 0 auto;
     padding: 1rem;
     box-sizing: border-box;
-
     font-size: 1.2rem;
 }
 
@@ -72,7 +71,7 @@ button {
 .counters {
     width: 80%;
     max-width: 720px;
-    height: 20%;
+    height: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,8 +82,12 @@ button {
 .question {
     height: 20%;
     font-size: 1.4rem;
-    display: flex;
-    align-items: center;
+    text-align: center
+}
+
+fieldset {
+    border: none;
+    margin: 0;
 }
 
 .answers {
@@ -93,9 +96,12 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-} .answers p {
+    margin-top: 5px;
+} 
+.answers p {
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
 }
 
 form {
@@ -121,16 +127,25 @@ li button{
 li button:hover {
     cursor: pointer;
     color: #1A1A1B;
-    background-color: white;
+    background-color: #FFF;
 } 
-li:nth-of-type(1) button {
-    color: rgb(86,156,214);
+li:nth-of-type(1) {
+    color: #569CD6;
 }
-li:nth-of-type(2) button {
-    color: rgb(206,145,120);
+li:nth-of-type(1):hover {
+    color: #225C8C;
 }
-li:nth-of-type(3) button {
-    color: rgb(156,220,254);
+li:nth-of-type(2) {
+    color: #CE9178;
+}
+li:nth-of-type(2):hover {
+    color: #864832;
+}
+li:nth-of-type(3) {
+    color: #9CDCFE;
+}
+li:nth-of-type(3):hover {
+    color: #015D8E;
 }
 
 label {
@@ -167,7 +182,8 @@ img.landing {
         border: solid 2px white;
         border-radius: 2%;
         width: 60%;
+        max-width: 750px;
         height: 800px;
-        margin-top: 20px;
+        margin-top: 25px;
     }
 }
