@@ -20,6 +20,10 @@ body {
     align-items: center;
 }
 
+a {
+    color: white;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -51,6 +55,15 @@ main {
     padding: 1rem;
     box-sizing: border-box;
     font-size: 1.2rem;
+}
+
+.flexbox {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.flexbox button {
+    margin: 4px;
 }
 
 button {

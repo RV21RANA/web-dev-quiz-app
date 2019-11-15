@@ -11,13 +11,20 @@
 </head>
 <body>
     <div id="root">
-        <header>
-            <h1>Front-End</h1>
-            <img class="logo" src="./images/abc-logo.png" alt="abc logo">
+        <header role="heading">
+            <a href="">
+                <h1>Front-End</h1>
+                <img class="logo" src="./images/abc-logo.png" alt="logo">
+            </a>
         </header>
         <main>
             <img class="landing" src="images/greg-rakozy-vw3Ahg4x1tY-unsplash.jpg" alt="books">
-            <button class="start landing-start">Start Quiz</button>
+            <p>What would you like to study?</p>
+            <div class="flexbox">
+                <button class="starthtml">HTML&CSS Basics</button>       
+                <button class="startjs">JavaScript Basics</button>       
+                <button class="startdev">Dev Environment</button> 
+            </div>   
         </main>
         <footer>
             <a href="https://github.com/pmnord" target="_blank"><i class="fab fa-github fa-3x"></i></a>
@@ -30,7 +37,9 @@
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
-    <script src="questions.js"></script>
+    <script src="question-libs/html-css-questions.js"></script>
+    <script src="question-libs/js-questions.js"></script>
+    <script src="question-libs/dev-env-questions.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
