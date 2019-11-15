@@ -10,7 +10,6 @@
     <title>Front-End abc</title>
 </head>
 <body>
-
     <div id="root">
         <header role="heading">
             <a href="">
@@ -18,17 +17,19 @@
                 <img class="logo" src="./images/abc-logo.png" alt="logo">
             </a>
         </header>
-        <main role="main">
+        <main>
             <img class="landing" src="images/greg-rakozy-vw3Ahg4x1tY-unsplash.jpg" alt="books">
             <p>What would you like to study?</p>
-            <button class="starthtml">HTML&CSS Basics</button>       
-            <button class="startjs">JavaScript Basics</button>       
-            <button class="startdev">Dev Environment</button>       
+            <div class="flexbox">
+                <button class="starthtml">HTML&CSS Basics</button>       
+                <button class="startjs">JavaScript Basics</button>       
+                <button class="startdev">Dev Environment</button> 
+            </div>   
         </main>
         <footer>
-            <a href="https://github.com/pmnord"><i class="fab fa-github fa-3x"></i></a>
-            <a href="https://www.linkedin.com/in/peter-nordman-57528432/"><i class="fab fa-linkedin-in fa-3x"></i></a>
-            <a href="https://angel.co/peter-nordman"><i class="fab fa-angellist fa-3x"></i></a>
+            <a href="https://github.com/pmnord" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+            <a href="https://www.linkedin.com/in/peter-nordman-57528432/" target="_blank"><i class="fab fa-linkedin-in fa-3x"></i></a>
+            <a href="https://angel.co/peter-nordman" target="_blank"><i class="fab fa-angellist fa-3x"></i></a>
         </footer>
     </div>
     
@@ -36,9 +37,9 @@
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
-    <script src="html-css-questions.js"></script>
-    <script src="js-questions.js"></script>
-    <script src="dev-env-questions.js"></script>
+    <script src="question-libs/html-css-questions.js"></script>
+    <script src="question-libs/js-questions.js"></script>
+    <script src="question-libs/dev-env-questions.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

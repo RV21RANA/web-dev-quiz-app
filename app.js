@@ -22,8 +22,10 @@ function renderQuestions () {
 
     // Generate our content sections in the main element
     $('main').append(`<section class="counters"></section>
-                        <section class="question"></section>
-                        <section class="answers"></section>`);
+                        <form>
+                            <div class="question"></div>
+                            <fieldset class="answers"></fieldset>
+                        </form>`);
     
     renderCounters();
 
@@ -46,14 +48,15 @@ function renderCounters () {
 
 function renderFeedback (feedback, answer) {
     renderCounters();
-    $('.answers').html(`${feedback}${answer || ''}<button class="next">Next Question</button>`)
+    $('.answers').html(`${feedback}${answer || ''}`);
+    $('main').append(`<button class="next">Next Question</button>`);
 }
 
 function renderFinal () {
     $('main').html(`
             <p>Your final score is...</p>
             <h3>${STORE.score}/${STORE.currentQuiz.length}</h3>
-            <button class="start">Play Again?</button>`)
+            <button class="play-again">Play Again?</button>`)
 }
 
 /* -------------------------------------------------------------------------- */
@@ -66,7 +69,7 @@ function checkAnswer (event) {
     // If correct, add 1 to score and render positive feedback
     if ($(event.target).hasClass('true')) {
         STORE.score++;
-        let feedback = `<p>Correct!</p>`;
+        let feedback = `<p class="correct-answer">Correct!</p>`;
         renderFeedback(feedback);
     } else {
         let feedback = `<p>Nope! The answer was:</p>`;
@@ -102,6 +105,7 @@ function init () {
     $('main').on('click', '.starthtml', ()=>{startQuiz(htmlQuestions)});
     $('main').on('click', '.startjs', ()=>{startQuiz(jsQuestions)});
     $('main').on('click', '.startdev', ()=>{startQuiz(devEnvQuestions)});
+    $('main').on('click', '.play-again', ()=>{window.location.reload()});
     $('main').on('click', '.check', checkAnswer);
     $('main').on('click', '.next', getNextQuestion);
         // .next, .check, .start
