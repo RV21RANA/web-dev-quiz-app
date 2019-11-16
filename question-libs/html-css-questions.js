@@ -31,4 +31,28 @@ const htmlQuestions = [
         question: 'Why might you set the font-size property to 0?',
         answer: 'To remove default spacing set by the browser'
     },
+    {
+        question: 'What is the purpose of the DOCTYPE command?',
+        answer: 'DOCTYPE tells the browser how to interpret the document'
+    },
+    {
+        question: 'Explain the `position: static` CSS property',
+        answer: 'Default; follows the normal page flow'
+    },
+    {
+        question: 'Where should you place the lang="en" attribute?',
+        answer: 'On the html tag'
+    },
+    {
+        question: 'Explain the `position: absolute` CSS property.',
+        answer: 'Removed from flow; affected by scrolling'
+    },
+    {
+        question: 'Explain the `position: relative` CSS property.',
+        answer: 'Normal flow; enables use of left/right/top/bottom/z-index'
+    },
+    {
+        question: 'Explain the `position: fixed` CSS property.',
+        answer: 'Removed from flow and unaffected by scrolling'
+    },
 ]
