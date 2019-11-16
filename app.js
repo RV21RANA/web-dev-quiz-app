@@ -35,9 +35,9 @@ function renderQuestions () {
     $('.question').append(`<p>${currentQuestion.question}</p>`);
     // Using the question object, insert answers data into a list
     $('.answers').html(`<form><ol>
-        <li class="check"><button type="submit" class="${currentQuestion.answers[0].correct}">${currentQuestion.answers[0].text}</button></li>
-        <li class="check"><button type="submit" class="${currentQuestion.answers[1].correct}">${currentQuestion.answers[1].text}</button></li>
-        <li class="check"><button type="submit" class="${currentQuestion.answers[2].correct}">${currentQuestion.answers[2].text}</button></li></ol></form>`);
+        <li class="check"><button type="submit" class="true">${currentQuestion.answer}</button></li>
+        <li class="check"><button type="submit">${STORE.answers[Math.floor(Math.random() * STORE.answers.length)]}</button></li>
+        <li class="check"><button type="submit">${STORE.answers[Math.floor(Math.random() * STORE.answers.length)]}</button></li></ol></form>`);
 }
 
 function renderCounters () {
@@ -54,9 +54,11 @@ function renderFeedback (feedback, answer) {
 
 function renderFinal () {
     $('main').html(`
-            <p>Your final score is...</p>
-            <h3>${STORE.score}/${STORE.currentQuiz.length}</h3>
-            <button class="play-again">Play Again?</button>`)
+            <div class="final-score">
+                <p>Your final score is...</p>
+                <h3>${STORE.score}/${STORE.currentQuiz.length}</h3>
+                <button class="play-again">Play Again?</button>
+            </div>`)
 }
 
 /* -------------------------------------------------------------------------- */
@@ -96,15 +98,19 @@ function startQuiz (library) {
     STORE.currentQuestion = 0;
     // Set quiz library
     STORE.currentQuiz = library;
+    // Generate false answers array
+    STORE.answers = library.map(each => each.answer);
 
     renderQuestions();
 }
 
 function init () {
     // Add event handlers on 'main' for each button class
-    $('main').on('click', '.starthtml', ()=>{startQuiz(htmlQuestions)});
-    $('main').on('click', '.startjs', ()=>{startQuiz(jsQuestions)});
-    $('main').on('click', '.startdev', ()=>{startQuiz(devEnvQuestions)});
+    $('main').on('click', '.start-html', ()=>{startQuiz(htmlQuestions)});
+    $('main').on('click', '.start-js', ()=>{startQuiz(jsQuestions)});
+    $('main').on('click', '.start-dev', ()=>{startQuiz(devEnvQuestions)});
+    $('main').on('click', '.start-design', ()=>{startQuiz(designQuestions)});
+    $('main').on('click', '.start-node', ()=>{startQuiz(nodeQuestions)});
     $('main').on('click', '.play-again', ()=>{window.location.reload()});
     $('main').on('click', '.check', checkAnswer);
     $('main').on('click', '.next', getNextQuestion);

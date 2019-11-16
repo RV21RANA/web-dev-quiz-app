@@ -35,16 +35,4 @@ const designQuestions = [
         question: 'Analogous Color Scheme',
         answer: 'Uses colors directly next to each other on the color wheel'
     },
-    {
-        question: '',
-        answer: ''
-    },
-    {
-        question: '',
-        answer: ''
-    },
-    {
-        question: '',
-        answer: ''
-    },
 ]
