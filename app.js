@@ -5,11 +5,9 @@
 // Application State
 const STORE = {
     score: 0,
-    currentQuestion: 0
+    currentQuestion: 0,
+    currentQuiz: ''
 }
-
-// Questions Library
-    // stored in questions.js and linked in html
 
 /* -------------------------------------------------------------------------- */
 /*                                    VIEW                                   */
@@ -18,6 +16,7 @@ const STORE = {
 // TODO: The score/question counters and the question move around the screen as elements are added and deleted. Make them static.
 
 function renderQuestions () {
+
     // Clear the main element
     $('main').html('');
 
@@ -31,7 +30,7 @@ function renderQuestions () {
     renderCounters();
 
     // Assign questions[currentIndex] to a variable to access our current question data
-    let currentQuestion = questions[STORE.currentQuestion];
+    let currentQuestion = STORE.currentQuiz[STORE.currentQuestion];
     // Use question object to set question text
     $('.question').append(`<p>${currentQuestion.question}</p>`);
     // Using the question object, insert answers data into a list
@@ -42,9 +41,9 @@ function renderQuestions () {
 }
 
 function renderCounters () {
-    let counters = `<span>Question: ${STORE.currentQuestion + 1}/${questions.length}</span>
-                    <span>Score: ${STORE.score}/${questions.length}</span>`;
-    $('.counters').html(`${counters}`);
+    let counters = `<span>Question: ${STORE.currentQuestion + 1}/${STORE.currentQuiz.length}</span>
+                    <span>Score: ${STORE.score}/${STORE.currentQuiz.length}</span>`
+    $('.counters').html(`${counters}`)
 }
 
 function renderFeedback (feedback, answer) {
@@ -56,8 +55,8 @@ function renderFeedback (feedback, answer) {
 function renderFinal () {
     $('main').html(`
             <p>Your final score is...</p>
-            <h3>${STORE.score}/${questions.length}</h3>
-            <button class="start">Play Again?</button>`)
+            <h3>${STORE.score}/${STORE.currentQuiz.length}</h3>
+            <button class="play-again">Play Again?</button>`)
 }
 
 /* -------------------------------------------------------------------------- */
@@ -83,25 +82,30 @@ function getNextQuestion () {
     // currentQuestion++
     STORE.currentQuestion++;
 
-    if (STORE.currentQuestion >= questions.length) {
+    if (STORE.currentQuestion >= STORE.currentQuiz.length) {
         renderFinal();
     } else {
         renderQuestions();
     }
 }
 
-function startQuiz () {
+function startQuiz (library) {
     // Set score to 0
     STORE.score = 0;
     // Set currentQuestion to 0
     STORE.currentQuestion = 0;
+    // Set quiz library
+    STORE.currentQuiz = library;
 
     renderQuestions();
 }
 
 function init () {
     // Add event handlers on 'main' for each button class
-    $('main').on('click', '.start', startQuiz);
+    $('main').on('click', '.starthtml', ()=>{startQuiz(htmlQuestions)});
+    $('main').on('click', '.startjs', ()=>{startQuiz(jsQuestions)});
+    $('main').on('click', '.startdev', ()=>{startQuiz(devEnvQuestions)});
+    $('main').on('click', '.play-again', ()=>{window.location.reload()});
     $('main').on('click', '.check', checkAnswer);
     $('main').on('click', '.next', getNextQuestion);
         // .next, .check, .start
