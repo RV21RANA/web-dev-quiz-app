@@ -49,14 +49,13 @@ Before you dive into the app, you'll need to:
 - Opted to keep as many elements on the page as static as possible to reduce visual confusion
 
 ### Future Features and Improvements
-- Randomized question order
-    - I'll probably initialize a copy of the original questions array using .map() to randomize it
-- Randomized answer order
+- ~~Randomized question order~~
+- ~~Randomized answer order~~
 - 'Learn more' link provided on wrong answers
-- Additional quiz libraries for study, with a way to switch between them
-- Fix the question section so that it doesn't reposition when the feedback view is rendered
+- ~~Additional quiz libraries for study, with a way to switch between them~~
+- ~~Fix the question section so that it doesn't reposition when the feedback view is rendered~~
 
 ### Todo-list
-1. Create a function that assembles an array of wrong answers
-2. Make the renderQuestions grab 2 random elements from the wrongAnswers array
-    1. Check that the randomly selected elements do not have the same string value as the real answer
+1. ~~Create a function that assembles an array of wrong answers~~
+2. ~~Make the renderQuestions grab 2 random elements from the wrongAnswers array~~
+    1. ~~Check that the randomly selected elements do not have the same string value as the real answer~~

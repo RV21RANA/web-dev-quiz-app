@@ -1,19 +1,14 @@
 const devEnvQuestions = [
     {
-        question: 'hello dev environment questions',
-        answers: [
-            {
-                text: 'It is not required.',
-                correct: false
-            },
-            {
-                text: 'To link to outside files.',
-                correct: false
-            },
-            {
-                text: 'To tell the browser how to interpret the document.',
-                correct: true
-            }
-        ]
+        question: 'How would you connect a local repository to a remote repository?',
+        answer: 'git remote add origin [url]'
+    },
+    {
+        question: 'How do you initialize a new branch in git?',
+        answer: 'git checkout -b my-branch'
+    },
+    {
+        question: 'What is the hotkey to open and close the terminal window in VSCode?',
+        answer: 'ctrl + tilde'
     }
 ]

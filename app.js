@@ -34,10 +34,44 @@ function renderQuestions () {
     // Use question object to set question text
     $('.question').append(`<p>${currentQuestion.question}</p>`);
     // Using the question object, insert answers data into a list
+
+    
+                        
+    function generateAnswerList () {
+        if (STORE.answers.length < 3) {
+            return undefined;
+        }
+
+        let answers = [currentQuestion.answer]
+
+        while (answers.length < 3) {
+            let newAnswer = STORE.answers[Math.floor(Math.random() * STORE.answers.length)];
+            if (!answers.includes(newAnswer)) {
+                answers.push(newAnswer);
+            }
+        }
+
+        // Plug the answers into an array containing the html markup
+        let answerLis = [`<li class="check"><button type="submit" class="true">${answers[0]}</button></li>`,
+                            `<li class="check"><button type="submit">${answers[1]}</button></li>`,
+                            `<li class="check"><button type="submit">${answers[2]}</button></li>`]
+        
+        // Randomize that array 
+
+        return answerLis.sort(() => Math.random() - 0.5);
+    }
+
+
+    
+    let answersArray = generateAnswerList();
+
+    // $('.answers').html(`<form><ol>
+    //     <li class="check"><button type="submit" class="true">${currentQuestion.answer}</button></li>
+    //     <li class="check"><button type="submit">${STORE.answers[Math.floor(Math.random() * STORE.answers.length)]}</button></li>
+    //     <li class="check"><button type="submit">${STORE.answers[Math.floor(Math.random() * STORE.answers.length)]}</button></li></ol></form>`);
+
     $('.answers').html(`<form><ol>
-        <li class="check"><button type="submit" class="true">${currentQuestion.answer}</button></li>
-        <li class="check"><button type="submit">${STORE.answers[Math.floor(Math.random() * STORE.answers.length)]}</button></li>
-        <li class="check"><button type="submit">${STORE.answers[Math.floor(Math.random() * STORE.answers.length)]}</button></li></ol></form>`);
+        ${answersArray[0]}${answersArray[1]}${answersArray[2]}</ol></form>`);
 }
 
 function renderCounters () {
@@ -97,7 +131,7 @@ function startQuiz (library) {
     // Set currentQuestion to 0
     STORE.currentQuestion = 0;
     // Set quiz library
-    STORE.currentQuiz = library;
+    STORE.currentQuiz = library.sort(() => Math.random() - 0.5);
     // Generate false answers array
     STORE.answers = library.map(each => each.answer);
 

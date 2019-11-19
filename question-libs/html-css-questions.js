@@ -24,7 +24,7 @@ const htmlQuestions = [
         answer: 'To group related elements in a form'
     },
     {
-        question: 'What is the purpose of the <legend> element?',
+        question: 'What is the purpose of the legend element?',
         answer: 'To define a caption for the fieldset element'
     },
     {

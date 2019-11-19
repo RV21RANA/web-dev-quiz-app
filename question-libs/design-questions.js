@@ -5,19 +5,19 @@ const designQuestions = [
     },
     {
         question: 'Shade',
-        answers: 'Adding black to a pure hue'
+        answer: 'Adding black to a pure hue'
     },
     {
         question: 'Tone',
-        answers: 'Adding gray to a pure hue'
+        answer: 'Adding gray to a pure hue'
     },
     {
         question: 'Tint',
-        answers: 'Adding white to a pure hue'
+        answer: 'Adding white to a pure hue'
     },
     {
         question: 'Chroma',
-        answers: 'Refers to the intensity or purity of a hue, relative to its brightness'
+        answer: 'Refers to the intensity or purity of a hue, relative to its brightness'
     },
     {
         question: 'Complementary Color Scheme',
