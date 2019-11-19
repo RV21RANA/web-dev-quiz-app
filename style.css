@@ -22,6 +22,7 @@ body {
 
 a {
     color: white;
+    text-decoration: none;
 }
 
 header {
@@ -57,12 +58,13 @@ main {
     font-size: 1.2rem;
 }
 
-.flexbox {
+.start-buttons {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
+    max-width: 650px;
 }
-.flexbox button {
+.start-buttons button {
     margin: 4px;
 }
 
@@ -96,12 +98,13 @@ button {
 }
 
 .question {
-    height: 20%;
-    font-size: 1.4rem;
+    height: 60px;
+    font-size: 1.6rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
 }
 
 fieldset {
@@ -116,12 +119,14 @@ fieldset {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5px;
+    padding-top: 30px;
 } 
 .answers p {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
+    box-sizing: border-box;
+    margin-top: 0;
 }
 
 form {
@@ -173,6 +178,11 @@ li:nth-of-type(3) button:hover {
 
 label {
     display: none;
+}
+
+.final-score {
+    text-align: center;
+    margin-top: 25%
 }
 
 footer {
