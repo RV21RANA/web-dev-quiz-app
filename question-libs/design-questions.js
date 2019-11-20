@@ -1,22 +1,22 @@
 const designQuestions = [
     {
-        question: 'Element Dominance',
+        question: 'What is Element Dominance?',
         answer: 'The concept of some elements having greater Visual Weight than the elements around them'
     },
     {
-        question: 'Shade',
+        question: 'What is Shade?',
         answer: 'Adding black to a pure hue'
     },
     {
-        question: 'Tone',
+        question: 'What is Tone?',
         answer: 'Adding gray to a pure hue'
     },
     {
-        question: 'Tint',
+        question: 'What is Tint?',
         answer: 'Adding white to a pure hue'
     },
     {
-        question: 'Chroma',
+        question: 'What is Chroma?',
         answer: 'Refers to the intensity or purity of a hue, relative to its brightness'
     },
     {

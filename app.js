@@ -82,7 +82,7 @@ function renderCounters () {
 
 function renderFeedback (feedback, answer) {
     renderCounters();
-    $('.answers').html(`${feedback}${answer || ''}`);
+    $('.answers').html(`<div class="feedback">${feedback}${answer || ''}</div>`);
     $('main').append(`<button class="next">Next Question</button>`);
 }
 
@@ -108,8 +108,8 @@ function checkAnswer (event) {
         let feedback = `<p class="correct-answer">Correct!</p>`;
         renderFeedback(feedback);
     } else {
-        let feedback = `<p>Nope! The answer was:</p>`;
-        let answer = `<p class="correct-answer">${$('.true').text()}</p>`;
+        let feedback = `<p class="red-text">Nope! The answer is:</p>`;
+        let answer = `<p>${$('.true').text()}</p>`;
         renderFeedback(feedback, answer)
     }
 }
