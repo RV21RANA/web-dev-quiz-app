@@ -39,11 +39,11 @@ h1 {
     margin-right: 30px;
     display: inline-block;
 }
+
 .logo {
     height: 2rem;
     /* display: inline-block; */
 }
-
 
 main {
     display: flex;
@@ -199,6 +199,10 @@ footer {
     cursor: pointer;
 }
 
+.red-text {
+    color: #FF4E3A;
+}
+
 .correct-answer {
     color: #56ff00;
     width: 100%;
@@ -214,10 +218,13 @@ img.landing {
 @media screen and (min-width: 600px) {
     #root {
         border: solid 2px white;
-        border-radius: 2%;
+        border-radius: 5px;
         width: 60%;
         max-width: 750px;
         height: 800px;
         margin-top: 25px;
+    }
+    .feedback {
+        padding-top: 40px;
     }
 }
