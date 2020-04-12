@@ -1,10 +1,10 @@
-# Front-End Quiz App
+# Web-Development Quiz App
 
 GitHub Pages: https://pmnord.github.io/front-end-quiz-app/
 
 ## About this project
 
-This project was developed entirely by myself as part of Thinkful's full stack program. My goal was to create a mobile-first front-end application with a clean UI that can be used with multiple question libraries and is scalable to any question size.
+This project was developed as part of Thinkful's full stack program. My goal was to create a mobile-first front-end application with a clean UI that supports multiple question libraries and automatically generates wrong answer options.
 
 ### Requirements
 
@@ -55,7 +55,7 @@ Before you dive into the app, you'll need to:
 - ~~Additional quiz libraries for study, with a way to switch between them~~
 - ~~Fix the question section so that it doesn't reposition when the feedback view is rendered~~
 
-### Todo-list
+### Development Road Map
 1. ~~Create a function that assembles an array of wrong answers~~
 2. ~~Make the renderQuestions grab 2 random elements from the wrongAnswers array~~
     1. ~~Check that the randomly selected elements do not have the same string value as the real answer~~
