@@ -1,7 +1,5 @@
 # Web-Development Quiz App
 
-GitHub Pages: https://pmnord.github.io/front-end-quiz-app/
-
 ## About this project
 
 This project was developed as part of Thinkful's full stack program. My goal was to create a mobile-first front-end application with a clean UI that supports multiple question libraries and automatically generates wrong answer options.
