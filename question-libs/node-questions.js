@@ -1,6 +1,6 @@
 const nodeQuestions = [
-    {
-        question: 'What language is NodeJS written in?',
-        answer: 'C++' 
-    },
-]
+  {
+    question: "What language is NodeJS written in?",
+    answer: "C++",
+  },
+];
